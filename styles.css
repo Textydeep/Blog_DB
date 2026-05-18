@@ -38,7 +38,8 @@ body > header {
   display: flex; align-items: center; gap: 2rem;
 }
 
-.site-name  { font-size: 1.05rem; color: #1c1c1e; letter-spacing: 0.02em; }
+.site-name  { font-size: 1.05rem; color: #1c1c1e; letter-spacing: 0.02em; text-decoration: none; }
+.site-name:hover { color: var(--accent); }
 .site-tagline { font-size: 0.65rem; color: #64748b; letter-spacing: 0.03em; margin-top: 0.15rem; }
 
 nav { display: flex; gap: 1.8rem; margin-left: auto; }
