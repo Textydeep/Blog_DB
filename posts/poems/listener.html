@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Listener Needs a Listener Too · Deepayan Banik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .poem { font-size: 0.88rem; line-height: 2.1; color: var(--fg); font-weight: 300; max-width: 520px; margin: 2rem 0; }
+    .poem-stanza { margin-bottom: 1.8rem; }
+    .poem-stanza p { margin-bottom: 0; line-height: 2.1; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div>
+        <div class="site-name">Deepayan Banik</div>
+        <div class="site-tagline">planetary scientist · university of toronto</div>
+      </div>
+      <nav>
+        <a href="../../index.html#science">science</a>
+        <a href="../../index.html#academics">academics</a>
+        <a href="../../index.html#experiences">experiences</a>
+        <a href="../../index.html#poems" class="active">poems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+
+    <a class="back-link" href="../../index.html#poems">← back to poems</a>
+
+    <article>
+      <header class="post-header">
+        <div class="label">Poems</div>
+        <h1>A Listener Needs a Listener Too</h1>
+        <span class="post-meta"></span>
+      </header>
+
+      <div class="post-body">
+        <div class="poem">
+
+          <div class="poem-stanza">
+            <p>Everyday as I leave home,</p>
+            <p>The door is left unlatched,</p>
+            <p>Hoping that when I return,</p>
+            <p>You would be waiting inside.</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>It would be a moment of great surprise,</p>
+            <p>As I always hoped and never expected it to happen,</p>
+            <p>Alas, it never does.</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>Because, on my way back,</p>
+            <p>I see you standing at some other door,</p>
+            <p>Waiting to be opened,</p>
+            <p>It's all a game of Wait I guess.</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>And one day,</p>
+            <p>If your Wait gets too long,</p>
+            <p>Just know that,</p>
+            <p>My door is still unlatched for you,</p>
+            <p>Don't blame me if I am not inside,</p>
+            <p>For it might just be that my Wait has been very long too.</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>But, the door will always be open, nonetheless, for you.</p>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      Deepayan Banik &nbsp;·&nbsp; University of Toronto &nbsp;·&nbsp;
+      <a href="mailto:deepayanbanik19@gmail.com">deepayanbanik19@gmail.com</a>
+    </div>
+  </footer>
+
+  <button class="btn back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ top</button>
+
+  <script>
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('visible', window.scrollY > 300);
+    });
+  </script>
+
+</body>
+</html>

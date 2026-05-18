@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constitutive Laws · Deepayan Banik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div>
+        <div class="site-name">Deepayan Banik</div>
+        <div class="site-tagline">planetary scientist · university of toronto</div>
+      </div>
+      <nav>
+        <a href="../../index.html#science" class="active">science</a>
+        <a href="../../index.html#academics">academics</a>
+        <a href="../../index.html#experiences">experiences</a>
+        <a href="../../index.html#poems">poems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+
+    <a class="back-link" href="../../index.html#science">← back to science</a>
+
+    <article>
+      <header class="post-header">
+        <div class="label">Science</div>
+        <h1>Constitutive Laws</h1>
+        <span class="post-meta">October 18, 2024 &nbsp;·&nbsp; 8 min read</span>
+      </header>
+
+      <div class="post-body">
+
+        <p>Writing something after a long time now. Had almost forgotten about the blog while settling into a new country. There are several things I'd like to discuss about that, but maybe in a later post. This one is primarily to brush up something I am planning to present for a term paper in one of my courses.</p>
+
+        <p><em>Caveat 1: This post is neither about just the Constitution nor about just Laws, but about Constitutive laws!</em></p>
+
+        <p>This is something I've been thinking about as a result of my multifaceted background. As an aerospace engineer, we learnt ideas that were really restricted to how aeroplanes and satellites work — and in engineering we focus so much on the applications that the subtlety of where the equations come from, or the fundamentals, are not discussed at all. That is to say, we wander far away from what is truly Physics and are mostly lost in the applications. As I say this, there'll be a thousand fingers pointing towards me saying "why 'lost'?" Isn't technology what is taking us further? To this, I say: true, but let's discuss more over a cup of tea!</p>
+
+        <p>I had learnt Fluid Mechanics before, but during my Masters I learned a bit of Kinetic Theory for Gases, which actually held out the picture of what fluids — or for that matter any continuum — are really like. When we learnt solid mechanics or fluid mechanics, it was the macroscopic behaviour of these substances we focused on. But where does the macroscopic behaviour originate from? And is it consistent with the microscopic nature of matter? Does the laws of physics stay the same at molecular and humanly observable scales? Well, turns out it does! But what do we know about the microscopic nature of substances? They are made of molecules and atoms. How does the way in which molecules interact with one another in a substance dictate its macroscopic behaviour?</p>
+
+        <p>Now, we shall take a quick detour and talk about something fairly related: Constitutive laws. I have talked a little bit about these in a <a href="granular-segregation.html">previous post about Granular Materials</a>. But now that I am talking to people in Physics (while doing my PhD), I feel like the ambit of constitutive laws pervades more disciplines than just solids, liquids and gases. Nonetheless, first off — what is a constitutive law?</p>
+
+        <blockquote>
+          A constitutive law describes what 'constitutes' a medium or substance in a macroscopic sense, and dictates how changing it may alter the dynamics associated with it.
+        </blockquote>
+
+        <h2>Newton, Hooke, and viscosity</h2>
+
+        <p>Let us talk about Newton's second law of motion. For speeds much lower than the speed of light:</p>
+
+        <pre><code>F = ma</code></pre>
+
+        <p>This basically says the force is directly proportional to the acceleration, with the constant of proportionality being the mass of the object. The equation relates something that is an external 'cause' (a kinetic property) — the force — to what may be called the 'effect' (a kinematic property) — the acceleration — via a constant which depends on how much matter is contained in the object. The mass of an object does depend on the amount and arrangement of molecules in the object and, in a way, is a fundamental property of the substance constituting it. If the number of molecules or some microscopic property changed, the kinematics of the object would be different for the same kinetics.</p>
+
+        <p>Could we say that Newton's second law is a constitutive law in some sense? Well, maybe! It does indicate how changing the fundamental constitution of the object affects its dynamics.</p>
+
+        <p>Now, we talk about solid and fluid mechanics — the most prevalent contexts where the term 'constitutive law' appears. We know about Hooke's law:</p>
+
+        <pre><code>Stress = Young's Modulus × Strain</code></pre>
+
+        <p>We can again see the cause-effect relationship here, with the Young's modulus (YM) being the constant of proportionality and the parameter that defines the material property. Basically, YM explains why a wooden ruler would not bend as much as a plastic one. Does YM depend on how the molecules in the material are arranged? Of course yes. And that is not new.</p>
+
+        <p>Similarly for Newtonian fluids:</p>
+
+        <pre><code>Shear stress = Viscosity × Strain rate</code></pre>
+
+        <p>where the viscosity of the fluid is the material property. For solids and fluids, constitutive laws relate an internal kinetic property (the stress) to a kinematic property (the strain or strain rate). But one needs the governing equations — the mass, momentum and energy balances — to solve for the complete internal state of the system.</p>
+
+        <p>You'll find constitutive laws in other fields like electromagnetism too, with parameters like permittivity, permeability, and electrical conductivity.</p>
+
+        <h2>Where do they come from?</h2>
+
+        <p>We know that conservation laws come from what is called Noether's theorem. But when it comes to constitutive laws, one of the most important distinctions is: "Some constitutive equations are simply phenomenological; others are derived from first principles."</p>
+
+        <p>The Young's modulus and viscosity of a substance are generally found by performing experiments — this is the phenomenological method. The other method is to derive a constitutive law from first principles: using mathematics to model material behaviour starting from fundamental assumptions, where "a first principle is a basic proposition or assumption that cannot be deduced from any other proposition or assumption."</p>
+
+        <p>This method was made historically significant by Ludwig Boltzmann, who laid the foundation of the kinetic theory of gases — describing how macroscopic properties like pressure, temperature and specific volume are related, not by performing experiments, but by assuming the atomic and molecular nature of matter. Boltzmann proposed a probabilistic collisional model for gases, obtaining the famous Ideal Gas law. The same theory has since been extended to derive analytical expressions for viscosity and even the constitutive laws for granular materials.</p>
+
+        <h2>Summary</h2>
+
+        <p>In order to understand the macroscopic behaviour of a system, one may use conservation laws in conjunction with constitutive laws — the latter of which may be derived from first principles (based on microscopic properties) or obtained via experiments and observation.</p>
+
+        <h2>An analogy with general relativity</h2>
+
+        <p><em>Caveat 2: I am no physicist, and hence the following is to be taken merely as an opinion.</em></p>
+
+        <p>My understanding of Einstein's work on General Relativity is extremely simplistic. However, having worked with some basic differential geometry, I was familiarised with Christoffel symbols and other nuances of curvilinear coordinate systems, which are extensively used in GR. We learn by analogy — finding similarities and differences between different systems and building understanding from them. I did something similar here.</p>
+
+        <p>That the distribution of matter bends spacetime is known to every science enthusiast today. For someone who has learnt solid mechanics, the word 'bend' rings a bell. When I look at Einstein's field equations (EFE) through a solid mechanics lens, it is easy to see that at the most basic level, a constant relates the distribution of matter (the energy-momentum tensor) to the deformation of spacetime (the Einstein tensor) — similar in structure to the stress-strain relationship stated earlier. This constant, comprising the speed of light and the universal gravitational constant, has been obtained phenomenologically through observations, just like Young's modulus is obtained from experiments.</p>
+
+        <p>The EFE must then be combined with the geodesic equations — which describe how freely falling particles move through curved spacetime — to solve for the evolution of matter and spacetime together. This coupling is analogous to the coupling of conservation laws and constitutive relations in continuum mechanics. One could say that the EFE is the constitutive law here.</p>
+
+        <p>This gives rise to two interesting questions I'd like to leave open:</p>
+
+        <ol>
+          <li>Is there a first-principles formulation for the constant of proportionality in the EFE?</li>
+          <li>Since these are universal constants, what would a different value imply? Just like a different value of Young's modulus or the dielectric constant implies a different material.</li>
+        </ol>
+
+        <p>I feel it is a nice point to let the story end here. What say?</p>
+
+      </div>
+    </article>
+
+    <hr>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      Deepayan Banik &nbsp;·&nbsp; University of Toronto &nbsp;·&nbsp;
+      <a href="mailto:deepayanbanik19@gmail.com">deepayanbanik19@gmail.com</a>
+    </div>
+  </footer>
+
+  <button class="btn back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ top</button>
+
+  <script>
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('visible', window.scrollY > 300);
+    });
+  </script>
+
+</body>
+</html>

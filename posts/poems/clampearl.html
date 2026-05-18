@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clampearl · Deepayan Banik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .poem { font-size: 0.88rem; line-height: 2.1; color: var(--fg); font-weight: 300; max-width: 520px; margin: 2rem 0; }
+    .poem-stanza { margin-bottom: 1.8rem; }
+    .poem-stanza p { margin-bottom: 0; line-height: 2.1; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div>
+        <div class="site-name">Deepayan Banik</div>
+        <div class="site-tagline">planetary scientist · university of toronto</div>
+      </div>
+      <nav>
+        <a href="../../index.html#science">science</a>
+        <a href="../../index.html#academics">academics</a>
+        <a href="../../index.html#experiences">experiences</a>
+        <a href="../../index.html#poems" class="active">poems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+
+    <a class="back-link" href="../../index.html#poems">← back to poems</a>
+
+    <article>
+      <header class="post-header">
+        <div class="label">Poems</div>
+        <h1>Clampearl</h1>
+        <span class="post-meta"></span>
+      </header>
+
+      <div class="post-body">
+        <div class="poem">
+
+          <div class="poem-stanza">
+            <p>So there is this ocean,</p>
+            <p>Huge,</p>
+            <p>I don't know where it begins,</p>
+            <p>I don't know where it ends,</p>
+            <p>In fact, I wouldn't even know what an ocean is if it was not for my learned friends,</p>
+            <p>But it's my home.</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>I'm just a little clamp,</p>
+            <p>Bobbing up and down, swaying to and fro as the waves kiss the shore,</p>
+            <p>Toiling to be a little more beautiful,</p>
+            <p>Everyday,</p>
+            <p>Such that when I leave,</p>
+            <p>I leave something worthwhile,</p>
+            <p>An example for some to live by,</p>
+            <p>Or to adorn a village girl's neckline.</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>Or if the ocean one day so desires,</p>
+            <p>My Earthly remains,</p>
+            <p>Shall join a million premature others,</p>
+            <p>To plead the case for our home,</p>
+            <p>In front of the judge and the oil diggers,</p>
+            <p>The same, they say,</p>
+            <p>There's an ocean,</p>
+            <p>Huge,</p>
+            <p>And beneath it, lies another,</p>
+            <p>Liquid gold, it's called,</p>
+            <p>They know where it begins, and,</p>
+            <p>For sure, where it ends,</p>
+            <p>But they know not,</p>
+            <p>How their glorious future,</p>
+            <p>May meet its untimely end.</p>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      Deepayan Banik &nbsp;·&nbsp; University of Toronto &nbsp;·&nbsp;
+      <a href="mailto:deepayanbanik19@gmail.com">deepayanbanik19@gmail.com</a>
+    </div>
+  </footer>
+
+  <button class="btn back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ top</button>
+
+  <script>
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('visible', window.scrollY > 300);
+    });
+  </script>
+
+</body>
+</html>

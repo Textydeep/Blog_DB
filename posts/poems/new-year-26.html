@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Year 26 · Deepayan Banik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .poem { font-size: 0.88rem; line-height: 2.1; color: var(--fg); font-weight: 300; max-width: 520px; margin: 2rem 0; }
+    .poem-stanza { margin-bottom: 1.8rem; }
+    .poem-stanza p { margin-bottom: 0; line-height: 2.1; }
+    .poem-note { font-size: 0.78rem; color: var(--muted); margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--border); font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div>
+        <div class="site-name">Deepayan Banik</div>
+        <div class="site-tagline">planetary scientist · university of toronto</div>
+      </div>
+      <nav>
+        <a href="../../index.html#science">science</a>
+        <a href="../../index.html#academics">academics</a>
+        <a href="../../index.html#experiences">experiences</a>
+        <a href="../../index.html#poems" class="active">poems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+
+    <a class="back-link" href="../../index.html#poems">← back to poems</a>
+
+    <article>
+      <header class="post-header">
+        <div class="label">Poems</div>
+        <h1>New Year 26</h1>
+        <span class="post-meta">January 1, 2026</span>
+      </header>
+
+      <div class="post-body">
+        <div class="poem">
+
+          <div class="poem-stanza">
+            <p>The planet crosses a stretch</p>
+            <p>As inconsequential as the rest</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>The birds, the fish, the mammals and insects</p>
+            <p>Wander not far from their cozy nest</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>While us, wherever we are in the world</p>
+            <p>Celebrate to our level best</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>As the thin thread spun with love</p>
+            <p>Undergoes its annual test</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>Isn't it beautiful, like words in a sentence</p>
+            <p>How our existence bears meaning only in context?</p>
+          </div>
+
+          <hr>
+
+          <div class="poem-stanza">
+            <p>I hope this year brings motion, from which naturally originates balance</p>
+            <p>Slow down but don't stop</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>Or be a leaf on water, that floats without effort</p>
+            <p>Or gets thrown around in the storm and still isn't torn apart</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>I hope you feel all that is human, and yet as if you are watching the movie of your own life</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>Happy new year!</p>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      Deepayan Banik &nbsp;·&nbsp; University of Toronto &nbsp;·&nbsp;
+      <a href="mailto:deepayanbanik19@gmail.com">deepayanbanik19@gmail.com</a>
+    </div>
+  </footer>
+
+  <button class="btn back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ top</button>
+
+  <script>
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('visible', window.scrollY > 300);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Discrete Element Method · Deepayan Banik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div>
+        <div class="site-name">Deepayan Banik</div>
+        <div class="site-tagline">planetary scientist · university of toronto</div>
+      </div>
+      <nav>
+        <a href="../../index.html#science" class="active">science</a>
+        <a href="../../index.html#academics">academics</a>
+        <a href="../../index.html#experiences">experiences</a>
+        <a href="../../index.html#poems">poems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+
+    <a class="back-link" href="../../index.html#science">← back to science</a>
+
+    <article>
+      <header class="post-header">
+        <div class="label">Science</div>
+        <h1>The Discrete Element Method</h1>
+        <span class="post-meta">August 22, 2023 &nbsp;·&nbsp; 7 min read</span>
+      </header>
+
+      <div class="post-body">
+
+        <h2>What is a continuum? It is totally hocus-pocus-mathamatocus!</h2>
+
+        <p>All matter that we see around us can be theoretically understood as continuous, such that differential and integral forms of equations representing their behaviour may be possible. This, quite often, allows us to obtain analytical expressions for understanding how they might respond to external agents like forces or moments. However, matter fundamentally — as we all know — is made of elementary units like molecules and atoms. It is discrete. A continuum, thus, is more like a mathematical construct rather than the reality.</p>
+
+        <p>The interaction law between the elementary units manifests itself in the continuum theory as what we popularly call the 'constitutive relation', which differentiates not only between different states of matter (solid, liquid, gaseous) but also amongst the sub-classes within them — for example, Newtonian and non-Newtonian fluids. Speaking of continuum, you may look into the Knudsen number, calculating which for a system tells you whether the continuum hypothesis is valid or not.</p>
+
+        <h2>Where continuum breaks down</h2>
+
+        <p>However useful, the applicability of the popular mass, momentum and energy balances for continuous media breaks down at discontinuities, or when molecules are so arranged that separate constitutive relations are required to describe different regions in the same substance. A popular example of the latter is <strong>granular materials</strong>. Why? Granular materials behave like solids when stacked (sugar in a container), flow like liquids when sheared (landslides on mountains), and move randomly like gases when energised significantly (rings of Saturn). <a href="https://www.youtube.com/watch?v=8xAfzz1HT8s" target="_blank" rel="noopener">This video</a> gives a great illustration. This requires one to be very careful while dealing with such discrepancies, often complicating the analysis in a way even Boltzmann might find difficult to understand.</p>
+
+        <h2>DEM to the rescue</h2>
+
+        <p>While continuum theories are able to accurately model these different phases, it becomes a tad bit more painful to formulate a unified theory for all of them. This is where DEM — the Discrete Element Method — comes in. A lot is obvious from just the nomenclature: the treatment is discrete. Granular materials are collections of particles which primarily interact only via collisions. In some cases there could be other 'contact' interactions involved — cohesion, Coulomb friction, etc. In others, one particle may interact with all others including those not in contact, like when electrostatic or gravitational forces exist between particles. All of this is easily, albeit at a much higher computational cost, simulated using DEM. DEM can capture some really interesting phenomena, like jamming in granular materials, which is otherwise difficult using continuum models.</p>
+
+        <h2>Why easy? Can anybody do it?</h2>
+
+        <p>Easy because all that needs to be solved is <code>F = ma</code> (well, <code>τ = Iα</code> if rotations are included, but that's just the same). At every timestep, the total force <code>F</code> can be calculated from a sum of all forces acting on a particle. Since the mass <code>m</code> is known, the acceleration <code>a</code> may be computed and numerically integrated once and twice to obtain velocity and displacement respectively.</p>
+
+        <p>Collisions are modelled by a pair of normal and tangential springs and dashpots, which could be linear or non-linear depending on the material being modelled. The spring decelerates relative motion between particles in contact; the dashpot dissipates energy, rendering collisions realistic and inelastic. There are six outputs: three for velocity and three for displacement. Once you have an RK4 or any other time-marching scheme in place, it is basically solving lakhs and lakhs of ODEs simultaneously.</p>
+
+        <h2>Limitations of DEM</h2>
+
+        <p>While DEM works with the least possible assumptions and captures most possible physics, there are of course some limitations. No one is perfect.</p>
+
+        <p><strong>Numero uno: Spherical particles.</strong> While people have tried all kinds of weird shapes, spherical particles get jobs done at a fractional expense compared with others — and even that expense is very high. You need supercomputers, and they have an enormous carbon footprint.</p>
+
+        <p><strong>Numero dos: Interaction laws can get super complicated</strong> and lead to high computational costs. Long-range forces like Coulomb or gravity increase the computational cost quadratically because forces need to be calculated from every particle on every other particle. It's the tool for the well-funded labs and government-funded educational institutes.</p>
+
+        <h2>DEM in planetary sciences</h2>
+
+        <p>In my Masters thesis, I used both continuum theory and DEM to study granular avalanches on rotating and gravitating asteroids. The use of DEM was primarily to evaluate the efficacy of the theory developed. Asteroids like Itokawa and Bennu are rubble-piles exhibiting all three behaviours — solid cores, fluid-like landslides on the surface, and almost gaseous mass shedding from the equatorial region. The video linked above shows the formation of a top-shaped asteroid due to surface landslides.</p>
+
+        <img src="top.gif" alt="Formation of a top-shaped rubble-pile asteroid via surface granular flow">
+        <p class="img-caption">Granular avalanches on a rotating body reshaping it into a top — DEM simulation</p>
+
+        <p>I used the popular open-source DEM software <strong>LAMMPS</strong> but had to tweak the source code to include the gravity field of ellipsoids. Several other people use <strong>LIGGGHTs</strong>, which is better suited for granular materials. For long-range forces like gravity, <strong>PKDGRAV</strong> and <strong>REBOUND</strong> work great — the latter is especially built for large numbers of particles at high collision velocities.</p>
+
+        <h2>Is there something in between?</h2>
+
+        <p>Hybrid methods pack the accuracy of DEM and the cost-effectiveness of continuum models. If you are interested, you could look into the work of a collaboration between groups at Columbia, MIT and U Tokyo — <a href="https://www.youtube.com/watch?v=Z86Udk2JXeU" target="_blank" rel="noopener">demonstrated here</a>. There's always something in between!</p>
+
+      </div>
+    </article>
+
+    <hr>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      Deepayan Banik &nbsp;·&nbsp; University of Toronto &nbsp;·&nbsp;
+      <a href="mailto:deepayanbanik19@gmail.com">deepayanbanik19@gmail.com</a>
+    </div>
+  </footer>
+
+  <button class="btn back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ top</button>
+
+  <script>
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('visible', window.scrollY > 300);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Granular Segregation in Spiti · Deepayan Banik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div>
+        <div class="site-name">Deepayan Banik</div>
+        <div class="site-tagline">planetary scientist · university of toronto</div>
+      </div>
+      <nav>
+        <a href="../../index.html#science" class="active">science</a>
+        <a href="../../index.html#academics">academics</a>
+        <a href="../../index.html#experiences">experiences</a>
+        <a href="../../index.html#poems">poems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+
+    <a class="back-link" href="../../index.html#science">← back to science</a>
+
+    <article>
+      <header class="post-header">
+        <div class="label">Science</div>
+        <h1>Granular Segregation in Spiti</h1>
+        <span class="post-meta">June 5, 2023 &nbsp;·&nbsp; 4 min read</span>
+      </header>
+
+      <div class="post-body">
+
+        <p>I recently took a trip to Spiti in Himachal Pradesh, a region on the leeward side of the mountain range that separates it from Manali, which is lush green. The mountains of Spiti are greatly barren and devoid of vegetation — I could not spot a single tree. This is primarily because of the lack of rainfall. Naturally, the landscape is very granular. Having spent some time learning about granular materials during my Masters, this place appeared very relatable to me.</p>
+
+        <p>On the slopes, you'll see something interesting: landslides. Not the typical ones where a chunk of landmass scrapes off the side of a mountain. These are shallow landslides with polydisperse grains. But you know what is even more interesting? <strong>Segregation.</strong> The bigger rocks and boulders are down at the bottom, and the fine particles are up the slope — a clear pattern of grain segregation. You'll also spot small landslides somewhere mid-slope where a similar pattern is repeated.</p>
+
+        <img src="spiti_landslide.jpg" alt="Granular segregation visible on a Spiti hillside landslide">
+        <p class="img-caption">Granular segregation on a Spiti hillside — larger boulders at the toe, fine grains above</p>
+
+        <h2>Why does this happen?</h2>
+
+        <p>Well, it's not a new discovery, unfortunately. Scientists and researchers have spent years figuring this out. One may check <a href="https://www.annualreviews.org/doi/pdf/10.1146/annurev-fluid-122316-045201" target="_blank" rel="noopener">this review article</a> for an in-depth treatment. Otherwise, here is an explanation for the layperson.</p>
+
+        <p>When a granular mixture moves down a slope, the bumpy base adds excitation to the flow in the direction normal to the base, against gravity. Additionally, different layers of the flow move at different velocities due to frictional resistance from the base — this is called <strong>shearing</strong>. Because the grains collide with one another due to the energy inputted, the smaller grains keep falling into the voids that form beneath them. As a result, the bigger grains rise to the top as the landslide progresses downwards.</p>
+
+        <p>Bigger grains have greater inertia and are hence slowed down less by frictional effects. They move ahead and reach the bottom of the slope much faster. The small particles experience greater retardation and lag behind, forming the graded pattern you see on the hillside.</p>
+
+        <h2>Beyond Earth</h2>
+
+        <p>There are extra-terrestrial instances of granular segregation as well. Asteroid Itokawa, for example, shows a clear spatial separation of large boulders and fine regolith on its surface — thought to be a result of similar size-sorting processes acting over long timescales under the asteroid's weak gravity.</p>
+
+        <img src="Itokawa.jpg" alt="Asteroid Itokawa showing spatial separation of boulders and fine regolith">
+        <p class="img-caption">Asteroid Itokawa — boulder-rich and smooth fine-grained regions clearly delineated. Credit: JAXA/ISAS</p>
+
+        <p>The slightly heavier scientific terms for these phenomena are the <strong>Brazil Nut Effect</strong>, <strong>Kinetic Sieving</strong>, and <strong>Squeeze Expulsion</strong> — each explaining different aspects of size sorting under combinations of gravitation, convection, and other physical parameters. But that is for another day.</p>
+
+      </div>
+    </article>
+
+    <hr>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      Deepayan Banik &nbsp;·&nbsp; University of Toronto &nbsp;·&nbsp;
+      <a href="mailto:deepayanbanik19@gmail.com">deepayanbanik19@gmail.com</a>
+    </div>
+  </footer>
+
+  <button class="btn back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ top</button>
+
+  <script>
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('visible', window.scrollY > 300);
+    });
+  </script>
+
+</body>
+</html>

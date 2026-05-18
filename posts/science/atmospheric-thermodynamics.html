@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atmospheric Thermodynamics: Stability and the Adiabatic Parcel · Deepayan Banik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div>
+        <div class="site-name">Deepayan Banik</div>
+        <div class="site-tagline">planetary scientist · university of toronto</div>
+      </div>
+      <nav>
+        <a href="../../index.html#science" class="active">science</a>
+        <a href="../../index.html#academics">academics</a>
+        <a href="../../index.html#experiences">experiences</a>
+        <a href="../../index.html#poems">poems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+
+    <a class="back-link" href="../../index.html#science">← back to science</a>
+
+    <article>
+      <header class="post-header">
+        <div class="label">Science</div>
+        <h1>Atmospheric Thermodynamics: Stability and the Adiabatic Parcel</h1>
+        <span class="post-meta">February 10, 2025 &nbsp;·&nbsp; 5 min read</span>
+      </header>
+
+      <div class="post-body">
+
+        <p>Thanks to my friend Harshil — who has recently taken an interest in atmospheric physics — I got the chance not only to revise my own understanding but also to fill some long-standing gaps in how I think about the thermodynamics of atmospheres. For me, it always begins with a simple but fundamental question: <strong>what happens to an air parcel if you move it up or down without letting it exchange heat with its surroundings?</strong> Will it return to where it came from, or will it keep drifting away?</p>
+
+        <p>When I picture a <strong>stable</strong> atmosphere, I immediately imagine a nicely <strong>stratified</strong> one: heavier layers below, lighter layers above. Earth's <strong>stratosphere</strong> is a perfect example. There, temperature actually <em>increases</em> with height because ozone absorbs UV radiation — and this temperature inversion strongly resists vertical motion. The <strong>troposphere</strong>, on the other hand, behaves very differently: temperature generally <em>decreases</em> with height, which encourages vertical mixing. That's why the troposphere is filled with rising thermals, clouds, storms — all the signs of an atmosphere that is only conditionally stable and often convectively active. Of course, water vapor adds another layer of complexity, so let's set moisture aside for now.</p>
+
+        <h2>Three ingredients</h2>
+
+        <p>To understand atmospheric stability in a clean, dry framework, we really just need three ingredients:</p>
+
+        <ol>
+          <li><strong>The first law of thermodynamics</strong> — which we use to describe what happens during adiabatic (no-heat-exchange) processes.</li>
+          <li><strong>The ideal gas law</strong> — our equation linking pressure, temperature, and density.</li>
+          <li><strong>Hydrostatic balance</strong> — the idea that, on large scales, upward pressure forces balance downward gravity. Even though convection involves vertical motion, those motions are still small compared to the dominant horizontal flows, so hydrostatic balance remains a good background state.</li>
+        </ol>
+
+        <h2>The adiabatic parcel</h2>
+
+        <p>Whenever an air parcel is displaced, it tries to adjust to its new environment — but different adjustments happen on different timescales. <strong>Pressure adjusts almost instantly</strong> (at the speed of sound), so the parcel always stays in pressure equilibrium with its surroundings. <strong>Temperature adjusts more slowly</strong>, so during rapid vertical displacements we can safely say the parcel does not have time to exchange heat with its environment. That's what makes the motion <strong>adiabatic</strong>.</p>
+
+        <p>An adiabatic process is simply one where the parcel does work (expands or contracts) <strong>without gaining or losing heat</strong>. According to the first law, any mechanical work done by or on the parcel shows up directly as a change in its internal energy — and therefore its temperature.</p>
+
+        <p>Using the first law, we can derive how a parcel's temperature changes when it moves from one pressure level to another <em>along an adiabatic path</em>. This only requires knowing its initial pressure and temperature, the final pressure, and two constants: <code>C_p</code> (specific heat at constant pressure) and <code>R</code> (the gas constant for dry air). Notice that we don't need the ideal gas law to compute this temperature change. <strong>We need the ideal gas law only when we want density</strong>, because stability ultimately depends on comparing <strong>parcel density after its adiabatic adjustment</strong> with the <strong>ambient density at the same height</strong>.</p>
+
+        <h2>The stability criterion</h2>
+
+        <p>And that's the key idea:</p>
+
+        <blockquote>
+          If the lifted parcel ends up <em>denser</em> than the surrounding air, it sinks back — the atmosphere is <strong>stable</strong>.<br>
+          If it ends up <em>lighter</em>, it keeps rising — the atmosphere is <strong>unstable</strong>.
+        </blockquote>
+
+        <p>This simple comparison, built on our three basic ingredients, is what decides the fate of an air parcel and, ultimately, the character of the atmosphere itself.</p>
+
+        <div class="callout">
+          Written with Harshil in mind. Post polished with the help of ChatGPT.
+        </div>
+
+      </div>
+    </article>
+
+    <hr>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      Deepayan Banik &nbsp;·&nbsp; University of Toronto &nbsp;·&nbsp;
+      <a href="mailto:deepayanbanik19@gmail.com">deepayanbanik19@gmail.com</a>
+    </div>
+  </footer>
+
+  <button class="btn back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ top</button>
+
+  <script>
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('visible', window.scrollY > 300);
+    });
+  </script>
+
+</body>
+</html>

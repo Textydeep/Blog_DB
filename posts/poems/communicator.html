@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Communicator · Deepayan Banik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .poem { font-size: 0.88rem; line-height: 2.1; color: var(--fg); font-weight: 300; max-width: 520px; margin: 2rem 0; }
+    .poem-stanza { margin-bottom: 1.8rem; }
+    .poem-stanza p { margin-bottom: 0; line-height: 2.1; }
+    .poem-section-title { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; margin-top: 2.5rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div>
+        <div class="site-name">Deepayan Banik</div>
+        <div class="site-tagline">planetary scientist · university of toronto</div>
+      </div>
+      <nav>
+        <a href="../../index.html#science">science</a>
+        <a href="../../index.html#academics">academics</a>
+        <a href="../../index.html#experiences">experiences</a>
+        <a href="../../index.html#poems" class="active">poems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+
+    <a class="back-link" href="../../index.html#poems">← back to poems</a>
+
+    <article>
+      <header class="post-header">
+        <div class="label">Poems</div>
+        <h1>Communicator</h1>
+        <span class="post-meta"></span>
+      </header>
+
+      <div class="post-body">
+        <div class="poem">
+
+          <p class="poem-section-title">I. Friend o' mine</p>
+
+          <div class="poem-stanza">
+            <p>It's long since a beautiful conversation has brightened up our day</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>Just after the odd hour of the afternoon</p>
+            <p>When the bustling surrounding is in temporary repose</p>
+            <p>When our worlds are in line with one another</p>
+            <p>I hear the device beep</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>Time passes as if in sleep</p>
+            <p>Simple yet sophisticated is the tone</p>
+            <p>Of projects and discoveries</p>
+            <p>Of mundane miseries, you know them all</p>
+            <p>We steal hasty glances</p>
+            <p>Should we invite chances, of suspicion</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>Who knew, our peace resided in a soul</p>
+            <p>Lightyears apart</p>
+            <p>I don't know if we look alike,</p>
+            <p>But our voices are the same, and also our name</p>
+            <p>Your ideas and thoughts are different though</p>
+            <p>That's how it is supposed to be</p>
+            <p>In fiction</p>
+            <p>With you, conversation has now become an addiction, almost like talking to my own self</p>
+            <p>But, how long</p>
+            <p>Before one finds out in due time</p>
+            <p>This secret of ours</p>
+          </div>
+
+          <p class="poem-section-title">II. Once they come to know the mystery</p>
+
+          <div class="poem-stanza">
+            <p>They'll say</p>
+            <p>Worlds are not meant to work this way</p>
+            <p>Interaction hinders normal function</p>
+            <p>Oblivious to</p>
+            <p>The tranquility and comfort of a synergy</p>
+            <p>For the soul is split</p>
+            <p>Into countless fragments</p>
+            <p>One yours, one mine, and the others</p>
+            <p>In worlds misaligned at this odd hour</p>
+            <p>They won't be wrong,</p>
+            <p>We all know how much the second law likes chaos</p>
+            <p>A murderer of peace, of calm</p>
+            <p>The king of anarchy</p>
+            <p>Yet for our own good, we'll go on</p>
+            <p>Careful and cautious</p>
+            <p>And should they come to know</p>
+            <p>We'll say how infinity outweighs any finite</p>
+            <p>Two in our case, in our defence</p>
+            <p>The rest is up to them</p>
+          </div>
+
+          <div class="poem-stanza">
+            <p>Here they had been doubting me for days</p>
+            <p>It's truly long since they destroyed the 'Communicator'</p>
+            <p>Not knowing what it really was</p>
+            <p>But if you remember a bit of what existed</p>
+            <p>An invention that was both ours</p>
+            <p>It could not have gone in vain</p>
+            <p>As now we are united</p>
+            <p>And we converse, but with our own selves.</p>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      Deepayan Banik &nbsp;·&nbsp; University of Toronto &nbsp;·&nbsp;
+      <a href="mailto:deepayanbanik19@gmail.com">deepayanbanik19@gmail.com</a>
+    </div>
+  </footer>
+
+  <button class="btn back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ top</button>
+
+  <script>
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('visible', window.scrollY > 300);
+    });
+  </script>
+
+</body>
+</html>
