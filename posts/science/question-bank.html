@@ -3,15 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Listener Needs a Listener Too · Deepayan Banik</title>
+  <title>A Question Bank populated through my PhD · Deepayan Banik</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css">
   <style>
-    .poem { font-size: 0.88rem; line-height: 2.1; color: var(--fg); font-weight: 300; max-width: 520px; margin: 2rem 0; }
-    .poem-stanza { margin-bottom: 1.8rem; }
-    .poem-stanza p { margin-bottom: 0; line-height: 2.1; }
+    .pdf-embed {
+      width: 100%;
+      height: 85vh;
+      min-height: 600px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      margin: 2rem 0;
+    }
+    .pdf-fallback {
+      padding: 2rem;
+      background: var(--bg-alt, #f9f9f9);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>
@@ -33,52 +47,28 @@
 
   <main class="page-wrap">
 
-    <a class="back-link" href="../../index.html#poems">← back to Poems</a>
+    <a class="back-link" href="../../index.html#science">← back to Science</a>
 
     <article>
       <header class="post-header">
-        <div class="label">✍️ Poems</div>
-        <h1>A Listener Needs a Listener Too</h1>
-        <span class="post-meta">August 3, 2021</span>
+        <div class="label">🔬 Science</div>
+        <h1>A Question Bank populated through my PhD</h1>
+        <span class="post-meta">May 18, 2026 &nbsp;·&nbsp; 5 years in the making</span>
       </header>
 
       <div class="post-body">
-        <div class="poem">
 
-          <div class="poem-stanza">
-            <p>Everyday as I leave home,</p>
-            <p>The door is left unlatched,</p>
-            <p>Hoping that when I return,</p>
-            <p>You would be waiting inside.</p>
+        <p>Over the course of my doctoral work in granular materials, geophysical fluid dynamics, and continuum mechanics, I kept a running document of interesting problems — questions I encountered in papers, lectures, and my own research, along with questions I found worth asking. This is that collection.</p>
+
+        <p>It is not a textbook or a problem set. It is more like a notebook of curiosities: things I could not immediately answer, things I wanted to think more carefully about, and occasionally, things I eventually did answer. It is organized loosely by topic and grows with time.</p>
+
+        <object class="pdf-embed" data="question-bank.pdf" type="application/pdf">
+          <div class="pdf-fallback">
+            <p>Your browser does not support inline PDF viewing.</p>
+            <p><a href="question-bank.pdf">Download the Question Bank (PDF)</a></p>
           </div>
+        </object>
 
-          <div class="poem-stanza">
-            <p>It would be a moment of great surprise,</p>
-            <p>As I always hoped and never expected it to happen,</p>
-            <p>Alas, it never does.</p>
-          </div>
-
-          <div class="poem-stanza">
-            <p>Because, on my way back,</p>
-            <p>I see you standing at some other door,</p>
-            <p>Waiting to be opened,</p>
-            <p>It's all a game of Wait I guess.</p>
-          </div>
-
-          <div class="poem-stanza">
-            <p>And one day,</p>
-            <p>If your Wait gets too long,</p>
-            <p>Just know that,</p>
-            <p>My door is still unlatched for you,</p>
-            <p>Don't blame me if I am not inside,</p>
-            <p>For it might just be that my Wait has been very long too.</p>
-          </div>
-
-          <div class="poem-stanza">
-            <p>But, the door will always be open, nonetheless, for you.</p>
-          </div>
-
-        </div>
       </div>
     </article>
 
