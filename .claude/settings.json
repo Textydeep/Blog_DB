@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(brew list *)",
+      "Bash(mdls /Users/deepayan/Documents/Blog_DB/Question_Bank.pdf)",
+      "Bash(cp /Users/deepayan/Documents/Blog_DB/Question_Bank.pdf /Users/deepayan/Documents/Blog_DB/posts/science/question-bank.pdf)",
+      "Bash(python3)",
+      "Bash(git -C /Users/deepayan/Documents/Blog_DB add index.html styles.css CoverPic.png posts/science/question-bank.html posts/science/question-bank.pdf posts/academics/fdse22.html posts/academics/internships.html posts/academics/phd-exp.html posts/academics/phd-survival.html posts/academics/shifting-disc.html posts/experiences/biking-erie.html posts/experiences/classical-music.html posts/experiences/iitk-friends.html posts/experiences/nobel-lec.html posts/experiences/treking-bhutan.html posts/experiences/yesu-satsang.html posts/poems/aattoprokash.html posts/poems/clampearl.html posts/poems/communicator.html posts/poems/elephantrains.html posts/poems/listener.html posts/poems/new-year-26.html posts/science/atmospheric-thermodynamics.html posts/science/constitutive-laws.html posts/science/discrete-element-method.html posts/science/granular-segregation.html)"
+    ],
+    "additionalDirectories": [
+      "/Users/deepayan/Documents/Blog_DB"
+    ]
+  }
+}
